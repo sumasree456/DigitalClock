@@ -2,51 +2,48 @@ body{
     margin: 0px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: 100vh;
-    justify-content: center;
     background: url("https://images.unsplash.com/photo-1499002238440-d264edd596ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
     background-size: cover;
+    overflow: hidden;
 }
 h2{
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: hsl(240, 4%, 28%);
+   text-transform: uppercase;
+   letter-spacing: 1px;
 }
-.clock{
-    display: flex;
+.clock {
+    display: flex ; 
 }
 .clock div{
     margin: 5px;
     position: relative;
 }
 .clock span{
+    text-transform: uppercase;
     display: flex;
-    height: 70px;
-    width:90px;
-    font-size: 40px;
-    text-shadow: 2px 2px 4px rgb(121, 121, 250);
-    background-color: rgb(121, 121, 250);
-    color: aliceblue;
-    justify-content: center;
+    height :90px;
+    width: 90px;
+    font-size: 50px;
+    background-color: rgb(175, 175, 210);
     align-items: center;
-    
+    justify-content: center;
+    color: aliceblue;
 }
 .clock .time{
+    background-color: rgb(87, 87, 235);
+    height: 60px;
+    width: 90px;
+    font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    height: 40px;
-    background-color: rgb(82, 82, 170);
-    font-size: 15px;
-    width:90px;
-    text-align: center;
-    color: aliceblue;
-    justify-content:center;
 }
 .clock #ampm{
-    position: absolute;
-    bottom: 0px;
-    height: 40px;
-    width: 60px;
-    font-size: medium;
+    bottom: 0;
+    position:absolute;
+    height: 50px;
+    font-size: 16px;
+    width: 70px;
+    background-color: rgb(16, 83, 61);
 }

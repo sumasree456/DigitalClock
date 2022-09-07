@@ -1,27 +1,30 @@
-const hrs=document.getElementById("hours")
-const mins=document.getElementById("minutes")
-const secs=document.getElementById("seconds")
-const ampm=document.getElementById("ampm")
-
-
+const hours1=document.getElementById("hours")
+const minutes1=document.getElementById("minutes")
+const seconds1=document.getElementById("seconds")
+const ampm1=document.getElementById("ampm")
 function clock(){
-    let h=new Date().getHours()
-    let m=new Date().getMinutes()
-    let s=new Date().getSeconds()
-    let ampm1="AM"
-    if(h>12){
-        h=h-12
-        ampm1="PM"
-    }
-
-    hrs.innerHTML=h
-    mins.innerHTML=m
-    secs.innerHTML=s
-    ampm.innerHTML=ampm1
-    setInterval(() => {
-        clock()
-    }, 1000);
+    let hrs=new Date().getHours()
+    let mins=new Date().getMinutes()
+    let secs =new Date().getSeconds()
+    let ampm="AM"
 
     
+
+    if (hrs>12){
+        hrs=hrs-12
+        ampm="PM"
+    }
+
+    hrs = hrs<10 ? "0"+ hrs : hrs;
+    hours1.innerHTML=hrs
+    minutes1.innerHTML=mins
+    seconds1.innerHTML=secs
+    
+    
+    ampm1.innerHTML=ampm
+    setTimeout(()=>{
+        clock()
+    },1000)
+
 }
 clock()

@@ -1,34 +1,32 @@
-const num1=Math.ceil(Math.random()*10)
-const num2=Math.ceil(Math.random()*10)
-const qsn=document.getElementById("qsn");
-const input=document.getElementById("input");
-const formans=document.getElementById("form")
-const score1=document.getElementById("score");
+const number1=Math.ceil(Math.random()*10)
+const number2=Math.ceil(Math.random()*10)
+const qsn=document.getElementById("qsn")
+const formanswer=document.getElementById("form")
+const score1=document.getElementById("score")
 
-let score=JSON.parse (localStorage.getItem("score")) ;
+let score=localStorage.getItem("score")
 if(!score){
-    score=0;
+    score=0
 }
-score1.innerText=`score: ${score}`
-qsn.innerHTML=`What is ${num1} multiply by ${num2} ? `;
-const crctans=num1*num2;
-formans.addEventListener("submit",()=>{
+score1.innerHTML=`score: ${score}`
 
-    const userans=+input.value
-    if(userans==crctans){
-        
+qsn.innerHTML=`What is ${number1} multiply by ${number2} ?`
+
+const crctanswer=number1*number2
+
+formanswer.addEventListener("submit" ,()=>{
+
+    const usernumber=input.value
+    if(usernumber==crctanswer){
         score++
         local();
-    }
-    else{
+    }else{
         score--
         local();
     }
-    
 })
 
 function local(){
     localStorage.setItem("score",JSON.stringify(score))
 }
-
 
